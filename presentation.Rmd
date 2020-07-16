@@ -1,0 +1,673 @@
+---
+title:  "Binaural Hearing and Speech Understanding: Potential Measures for Hidden Hearing Loss"
+author: "Jaime A. Undurraga"
+date: "`r Sys.Date()`"
+output: 
+ revealjs::revealjs_presentation:
+   theme: white
+   transition: fade
+   slide_level: 2
+   self_contained: false
+   reveal_plugins: ["zoom", "notes", "chalkboard"]
+   reveal_options:
+     chalkboard: 
+       toggleNotesButton: true
+     slideNumber: true
+     progress: true
+     previewLinks: true
+   includes:
+     in_header: header.html
+     before_body: doc_prefix.html
+     after_body: doc_suffix.html
+   css: presentation.css
+   # pandoc_args: [ "--output=index.html"]
+# bibliography: ./library.bib  
+---
+
+```{r setup, include=T, echo=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, kfigr.prefix=TRUE, kfigr.link=TRUE, comment=NA)
+```
+
+
+# Introduction
+
+## Cocktail-party problem (Cherry, 1953)
+
+How do we recognize what one person is saying when others are speaking at the same time?
+
+When everyone at a well-attended party talks at the same level, the speech of the attended talker at a distance of 0.7 m has a signal-to-noise ratio (SNR) of about 0 dB (the background is as intense as the target talker Plomp 1977). 
+This level is sufficient to give adequate intelligibility for listeners with normal hearing (Miller, 1947).
+
+<center>
+![](./my_figures/cocktail_party_effect.png){width="40%"}
+</center>
+
+## Auditory scene analysis
+
+- A critial role of the auditory system is to parse the inputs from the left and right ears into auditory objects - auditory scene analysis. This is an essential role for survival, recognition, and communication.
+
+- Binaural hearing provides cues that allow us to estimate the relative number and location of sources and objects in the environment.
+
+- These cues also help us to estimate the dimensions and characteristics of rooms as well as to hear out speakers in the presence of interfering noise.
+
+<center>
+![](./my_figures/casa_Grothe_2010.png){width="50%"}
+</center>
+
+<center>
+Grothe et al. (2010)
+</center>
+
+
+# Encoding of sounds
+
+## Monaural Pathway
+
+<center>
+<img class="fragment" data-fragment-index="0" src="./my_figures/Anatomy_of_the_Human_Ear.svg" width="80%">
+</center>
+
+## Peripheral processing
+
+<center>
+<img class="fragment" data-fragment-index="0" src="./my_figures/Uncoiled_cochlea_with_basilar_membrane_color.png" width="45%">
+<img class="fragment" data-fragment-index="1" src="./my_figures/Cochlea-crosssection.png" width="25%">
+<br>
+<img class="fragment" data-fragment-index="2" src="./my_figures/auditory_nerve.png" width="25%">
+</center>
+
+
+## Coding at moderate intensity levels
+
+- 500 Hz tone modulated at 40 Hz at *25 dB SPL*
+
+<center>
+![](./figures_an/figures_anf_left/plot_raster/plot_raster__c_f_5.0e+02__source_an_m_f_2.7e+01__m_i_1.0e+00__spl_2.5e+01_gbc.png){width="70%"}
+</center>
+
+ 
+## Coding at moderate-to-middle intensity levels
+ 
+- 500 Hz tone modulated at 40 Hz at *45 dB SPL*
+<center>
+![](./figures_an/figures_anf_left/plot_raster/plot_raster__c_f_5.0e+02__source_an_m_f_2.7e+01__m_i_1.0e+00__spl_4.5e+01_gbc.png){width="70%"}
+</center>
+
+
+## Coding at middle intensity levels
+
+- 500 Hz tone modulated at 40 Hz at *65 dB SPL*
+<center>
+![](./figures_an/figures_anf_left/plot_raster/plot_raster__c_f_5.0e+02__source_an_m_f_2.7e+01__m_i_1.0e+00__spl_6.5e+01_gbc.png){width="70%"}
+</center>
+
+
+- Cochear synaptopathy reduces the ability to encode sound envelopes, specially at at higher inentensity levels.
+
+
+## Which features are conveyed by speech sounds?
+
+- Temporal fine structure (TFS)
+- Envelope information (ENV)
+
+<li class ="fragment" data-fragment-index="0" data-audio-src="./audio/speech-davidvocoder.wav" data-audio-advance=-1> Play 6 Channel vocoder </li>
+<li class ="fragment" data-fragment-index="1" data-audio-src="./audio/david.wav" data-audio-advance=-1> Play Original </li>
+
+<center>
+![](./my_figures/temporal-example.png){width="60%"}
+</center>
+
+
+
+## Binaural cues
+
+When listening to sounds, we rely on three mechanisms for both sound localization and auditory scene analysis 
+
+<li class ="fragment" data-fragment-index="0"> Interaural level differences (ILDs) </li>
+
+<li class ="fragment" data-fragment-index="1"> Interaural time differences (ITDs) </li>
+
+<li class ="fragment" data-fragment-index="2"> Interaural coherence </li>
+
+
+## ITDs and ILDs
+
+<center>
+![](./my_figures/itd_ild_cartoon.png){width="60%"}
+</center>
+
+
+## ILDs
+
+<img class="fragment" data-fragment-index="0" src="./my_figures/azimuth.png" width="40%">
+<img class="fragment" data-fragment-index="1" src="./my_figures/azimuth_ir.png" width="50%"> 
+<li class="fragment" data-fragment-index="2"> ILDs only useful for frequencies higher than 1200 Hz </li> 
+<li class="fragment" data-fragment-index="3"> ILDs can be as large as 20 dB (e.g. Bronkhorst &
+Plomp, 1988) </li> 
+
+<li class="fragment" data-fragment-index="3">
+ILDs resulting from the **head shadow** provide an advantage by sheltering the ear turned toward the target source from noise from the other side.
+However, listeners with unilateral hearing loss struggle when the target sound comes from the impaired side, specially in the presence of background noise.
+</li> 
+
+
+## Localization using ITDs
+
+<img class="fragment" data-fragment-index="0" src="./my_figures/azimuth_itd.png" width="40%">
+<img class="fragment" data-fragment-index="1" src="./my_figures/itd_ir.png" width="50%">
+
+<li class="fragment" data-fragment-index="2"> 
+ITDs within the physiological range experienced by human listeners are about ±760 μs; (e.g. Constan and Hartmann (2003) and Hartmann and Macaulay (2014)) </li>
+
+<li class="fragment" data-fragment-index="3">
+ITDs (using fine structure) are useful for frequencies below  1500 Hz
+</li>
+
+<li class="fragment" data-fragment-index="4">
+ITDs in the envelope of the signal are also used to determine the location of a source in both lower and higher frequencies.
+</li>
+
+## Temporal fine structure ITDs
+
+<div class="column" style="float:left; width:50%; text-align: center">
+<img class="fragment" data-fragment-index="0" src="./my_figures/p1_0.00_p2_-1.57_mi_0.0_mp1_0.00_mp2_0.00_cf_500.0_mf_32.0.png" width="90%" data-audio-src="./audio/p1_0.00_p2_-1.57_mi_0.0_mp1_0.00_mp2_0.00_cf_500.0_mf_32.0.wav" data-audio-advance=-1>
+<p class="fragment" data-fragment-index="0"> 500 Hz tone TFS left-to-right </p>
+</div>
+
+<div class="column" style="float:right; width:50%; text-align: center">
+<img class="fragment" data-fragment-index="1" src="./my_figures/p1_0.00_p2_-0.00_mi_1.0_mp1_0.00_mp2_-1.57_cf_500.0_mf_32.0.png" width="90%" data-audio-src="./audio/p1_0.00_p2_-0.00_mi_1.0_mp1_0.00_mp2_-1.57_cf_500.0_mf_32.0.wav" data-audio-advance=-1>
+<p class="fragment" data-fragment-index="1"> Modulated 500 Hz tone <br> with envelope itd (ipd) left-to-right</p>
+</div>
+
+## Envelope ITDs
+
+
+<div class="column" style="float:left; width:50%; text-align: center">
+<img class="fragment" data-fragment-index="2" src="./my_figures/p1_0.00_p2_-1.57_mi_0.0_mp1_0.00_mp2_0.00_cf_4000.0_mf_32.0.png" width="90%" data-audio-src="./audio/p1_0.00_p2_-1.57_mi_0.0_mp1_0.00_mp2_0.00_cf_4000.0_mf_32.0.wav" data-audio-advance=-1>
+<p class="fragment" data-fragment-index="2"> 4000 Hz tone TFS itd (ipd) left-to-rigth </p>
+</div>
+
+<div class="column" style="float:right; width:50%; text-align: center">
+<img class="fragment" data-fragment-index="3" src="./my_figures/p1_0.00_p2_0.00_mi_1.0_mp1_0.00_mp2_-1.57_cf_4000.0_mf_32.0.png" width="90%" data-audio-src="./audio/p1_0.00_p2_-0.00_mi_1.0_mp1_0.00_mp2_-1.57_cf_4000.0_mf_32.0.wav" data-audio-advance=-1>
+<p class="fragment" data-fragment-index="3"> Modulated 4000 Hz tone <br> with envelope itd left-to-rigth </p>
+</div>
+
+
+# Binaural processing and speech understanding
+
+## Binaural Redundancy (aka Binarural summation)
+
+- Loudness doubles when the two ears are used instead of one ear for a sound coming from the front of the listener (a single ear would require an increase of about 10 dB; Fletcher and Munson, 1933)
+
+- Just noticeable differences in intensity and frequency improve with signal redundancy
+
+- Speech recognition in the presence of background noise improves (Marrone 2008, Neher 2009)
+
+- Hearing impairment may lead to a slightly weaker binaural benefit in patients  (Dillon, 2001)
+
+- Binaural sounds can be louder than with a monaural presentation without causing discomfort (even true for CI-treated patient)
+
+## Binaural Release from Masking (or Binaural Squelch; or Hirsh effect)
+
+<img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_n0s0.png" width="45%" data-audio-src="./audio/convolved/sinusoidal_arctic_a0002_d_type_noise_target_0_d1_0_d2_0_snr_-10.wav" data-audio-advance=-1 data-audio-advance=-1 >
+<img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_n0spi.png" width="45%" data-audio-src="./audio/convolved/sinusoidal_arctic_a0002_d_type_noise_target_0_d1_90_d2_-90_snr_-10.wav" data-audio-advance=-1 data-audio-advance=-1>
+
+<li class="fragment" data-fragment-index="2"> Binaural release from masking may improve detection threshold up to about 16 dB for frequencies around 250 Hz and around 3 dB at 1500 Hz </li>
+
+
+## Spatial Release from Masking  
+
+<img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_srm_front.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_0_d2_0_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1 >
+<img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_srm.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_-80_d2_80_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1>
+
+<li class="fragment" data-fragment-index="2"> 
+Binaural release from masking may improve detection thresholds up to 12 dB for multiple speech interferers <font size="3">(Jones and Litovsky, 2011)</font> and facilitates source segregation <font size="3">(Drennan, Gatehouse, and Lever, 2003)</font>.
+</li>
+<li class="fragment" data-fragment-index="3"> 
+Segregation is always better for the combination of both ITDs and ILDs cues <font size="3">(Culling, Hawley, and Litovsky 2004)</font>.
+</li>
+<li class="fragment" data-fragment-index="4"> 
+A separation of only 10° is already strong enough to allow segregation  <font size="3"> (Brungart and Simpson, 2007) </font>.
+</li>
+<li class="fragment" data-fragment-index="5"> ITD is a critical spatial cue for sound localization and speech perception in noise <font size="3"> (Bronkhorst &
+Plomp, 1988; Wightman & Kistler, 1992) </font>.
+</li>
+
+
+
+## The role of spatial cues in Auditory scene analysis
+
+
+>- When the speech sources are spatially separated, normal listeners can perceptually segregate and selectively attend to the source of interest if the sounds arrive from the same location - **spatial release from masking (SRM) ** (Freyman et al., 1999; Brungart, 2001; Freyman
+et al., 2001; Hawley et al., 2004)
+
+
+>- This task is extreamly challenging for listeners with sensorineural hearing loss (with or without hearing aids) or with cochlear implants (Loizou et al., 2009; Marrone et al., 2008).
+
+
+>- Moreover, listeners with "normal" hearing and elder listeners experience great difficulty when listening in the presence of background noise (Ruggles et al., 2011; Swaminathan et al., 2015; Gallun et al., 2013).
+
+>- Hearing impaired listeners with symmetric binaural hearing often demonstrate reduced SRM primarily due to increased thresholds in spatially separated conditions (Arbogast et al., 2005; Marrone et al., 2008b; Best et al., 2012)
+
+
+
+# Auditory Pathway
+
+## From sounds to action potentials
+
+<center>
+Input to one ear
+<br>
+![](./my_figures/spectrogram_cheap.png){width="40%"}
+<br>
+Output at the auditory nerve level
+<br> 
+![](./my_figures/rater.png){width="40%"}
+</center>
+
+## Auditory Pathway
+
+<center>
+![](./my_figures/auitorypath.png){width="40%"}
+</center>
+
+
+## Binaural pathway
+
+<center>
+![](./my_figures/auditory_pathway.png){width="60%"}
+</center>
+
+## ITD pathway
+
+<center>
+![](./my_figures/itd_pathway.svg){width="80%"}
+</center>
+
+<center>
+(Grothe et al. 2010)
+</center>
+
+
+<li class="fragment" data-fragment-index="0">
+The initial site of ITD processing is considered to be the MSO.
+</li>
+
+<li class="fragment" data-fragment-index="1">
+MSO are innervated by direct excitatory ipsi- anc contra-lateral inputs from spherical bushy cells and inhibitory inputs indirectly originating from the globular bushy cells.
+</li>
+
+## Coincidence detection (MSO)
+||||
+|-|-|-|
+|<video width="320" height="240" controls source src="./my_figures/delay_network_0.0.mp4" type="video/mp4">| <video width="320" height="240" controls source src="./my_figures/delay_network_0.4.mp4" type="video/mp4">|<video width="320" height="240" controls source src="./my_figures/delay_network_0.9.mp4" type="video/mp4">|
+
+
+## Hidden Hearing Loss
+
+- Clinically, pure-tone audiometry (PTA) is used to assess the hearing status of human listeners (typically between 125 to
+ 8000Hz). However, some “Normal Hearing (NH)” listeners (5 - 15 % of patients) report great difficulties in understanding speech, particularly in noisy and high reverberation environments, beyond the level that would be predicted from their audiogram (Füllgrabe et al., 2015).
+ 
+ 
+- Animal studies in mice and guinea pigs have shown that noise exposure can lead to 40 - 50 \% of loss of fibres synapses
+ with the inner hair cells in the cochlea - **Synaptopathy** (e.g. Kujawa and Liberman, 2015, 2009; Liberman and Kujawa, 2014). 
+- Histological data seems to confirm this effect in “Normal Hearing” human cochleas (Viana et al., 2015).
+
+- Synaptopathy affect all types of AN fibers: high-SR \/ low- and medium-SR fibers ratio of about 1\:3 (Marmel et al. 2015). 
+ 
+- Noise exposure may reduce the number of synapses between AN fibers and hair cells (Synaptopathy) but also induce **transient loss of cochlear Schwann cells resulting in permanent auditory temporal deficits (Wan and Corfas 2017)**
+
+<center>
+![](./my_figures/an_schawnn_cell.png){width="8%"}
+</center>
+
+
+## Binaural hearing and hidden hearing loss
+
+- Binaural hearing plays a critical role when listening speech in noise. 
+
+- A deterioration in the ability to encode the temporal fine structure of speech will reduce the ability to encode ITD and speech understanding. 
+
+- If noise exposure induces **transient loss of cochlear Schwann cells (Wan and Corfas 2017)**, the ability to encode ITD cues will decrease. 
+
+
+## Binaural processing may be more sentitive than monaural measures. 
+
+- Processing of binaural stimuli is accomplished via an **"effective multiplication" of the neural information arising from each monaural channel** (Bernstein and Trahiotis2016). Thus, small monaural neural damage could result in more substantial and perceptually meaningful binaural losses.
+
+<center>
+![](./my_figures/Bernstein_and_Trahiotis_2016.png){width="40%"}
+</center>
+
+<center>
+<font size="3">Bernstein and Trahiotis (2016)</font>
+</center>
+
+
+# Objective detection of binaural processing in humans
+
+## Electroencephalogram (EEG)
+
+- EEG allows to record electrical activity of the brain by means of electrodes placed along the scalp.
+
+<center>
+![](./my_figures/eeg_brain_example.png){width="60%"}
+</center>
+
+## EEG principle
+
+<center>
+![](./my_figures/Luck_2005_erp.png){width="50%"}
+</center>
+
+<center>
+(From Luck 2005)
+</center>
+
+## Auditory evoked potentials
+
+<center>
+![](./my_figures/auditory_path_transient_reponse.png){width="50%"}
+</center>
+
+## Transient and sustained response
+<center>
+![](./my_figures/transients_sutained_brain_responses.png){width="60%"}
+</center>
+
+## Lab settings
+
+<center>
+![](./my_figures/eeg_setting.png){width="50%"}
+</center>
+
+<center>
+![](./my_figures/software_biosemi_01_large.jpg){width="50%"}
+</center>
+
+
+## Realtime processing
+
+<video width="100%" height="100%" controls source src="./my_figures/eeg_example.mp4" type="video/mp4">
+
+
+# Objective detection of binaural processing
+
+
+## Interaural-phase modulation following-responses (IPM-FR)
+
+- Objective measures of binaural processing can be obtained by using stimuli where the temporal fine structure is manipulated so that the perceived location of the sound image changes periodically (e.g. 6.7 Hz) over time. 
+
+<center>
+![](./my_figures/stimulus_example_ipd.png){width="40%"}
+</center>
+<center>
+(Undurraga et al. 2016)
+</center>
+
+##
+
+- The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound.
+
+<br>
+
+||||
+|-|-|-|
+|<video width="320" height="240" controls source src="./my_figures/example-90.0_90.0.mp4" type="video/mp4">| <video width="320" height="240" controls source src="./my_figures/example-45.0_45.0.mp4" type="video/mp4">|<video width="320" height="240" controls source src="./my_figures/example-22.5_22.5.mp4" type="video/mp4">|
+
+## EEG processing
+
+All data was processed with **"pyeeg-python"** (Python 3.7)
+
+- Data referenced to Cz and  down-sampled to 1024 samples per second
+
+- Poor electrode were automatically detected and removed
+
+- Eye blink artifacts were removed using a template matching suppression method <font size="3">(Valderrama et al., 2018)</font>
+
+- Data filtered using a FIR Kaiser filter (−65 dB ripple and 1 Hz transition between pass and stop band)
+
+- Epochs were sorted and de-noised using spatial filtering <font size="3">(de Cheveigné and Simon, 2008)</font>
+
+- Epochs averaged using a weighted averaging method <font size="3"> (Don and Elberling, 1994) </font>
+
+- Frequency response (FFT of 4255 points at 0.24 Hz resolution) and tested using Hotelling’s T-squared test <font size="3"> Picton et al. (1987) and Picton et al. (2003)</font>
+
+
+## Results
+
+<center>
+<ul class="fragment" data-fragment-index="0">
+<img src="./my_figures/undurraga_2016.svg" width="100%">
+</ul>
+</center>
+
+<li class="fragment" data-fragment-index="1">
+By switching the "sound image" from left to right at 6.7 Hz, a strong steady-state response is evoked at that particular frequency
+</li>
+
+<li class="fragment" data-fragment-index="2">
+IPM-FRs are larger when the stimuli causes a strong lateralization percept.
+</li>
+
+
+## How well do objective IPM-FR and behavioural measurements correlate with each other?
+
+Behavioural task
+
+<center>
+<ul class="fragment" data-fragment-index="0">
+<img src="./my_figures/undurraga_2016_behavioural_paradigm_trial_1.png" align="middle" width="60%">
+</ul>
+</center>
+
+<center>
+<ul class="fragment" data-fragment-index="1">
+<img src="./my_figures/undurraga_2016_behavioural_paradigm_trial_2.png" align="middle" width="60%">
+</ul>
+</center>
+
+<center>
+<ul class="fragment" data-fragment-index="2">
+<img src="./my_figures/undurraga_2016_behavioural_paradigm_trial_3.png" align="middle" width="60%">
+</ul>
+</center>
+
+<ul class="fragment" data-fragment-index="3">
+The level of the masking noise to perform at chance is determined and compared and then compared with brain responses (IPM-FR)
+</ul>
+
+## Behavioural vs. Objective measures
+
+![](./my_figures/spectral-magnitude-thr-ipd-ave.svg){width="100%"}
+
+>- The correlation between objective and behavioural measurements is excellent (r = 0.96)
+
+
+# The effect of age and hearing loss in objective binaural measures
+
+## Aims
+- Does the IPM-FR differ between healthy and impaired hearing listeners?  
+
+<center>
+![](./my_figures/vercommen_pta.png){width="60%"}
+</center>
+
+<center>
+Vercammen et al. (2018)
+</center>
+
+>- Interaural difference in hearing thresholds near the stimulation frequency (500 Hz) did not exceed 10 dB HL.
+>- The stimulus level was 65 dB SPL for normal listeners.
+>- The stimulus level for hearing impaired listeners was adjusted using visual analogue scale (“inaudible”, “very soft”, “soft”, “comfortable”, “loud”, “very loud”, and “uncomfortably loud”). The subjective loudness was adjusted to match that of normal listeners.
+
+## Stimuli
+
+Stimuli were amplitude modulated tones (500 Hz) using IPDs ranging from 0 (diotic) to 180 (dichotic).
+
+<center>
+![](./my_figures/vercommen_paradigm_fig.png){width="40%"}
+<br>
+![](./my_figures/vercommen_paradigm.png){width="40%"}
+</center>
+
+
+## Results
+
+<center>
+<img src="./my_figures/vercommen_ipm-fr.png" width="30%">
+<img src="./my_figures/vercammena_ipm_fr_data.png" width="50%">
+</center>
+
+- Binaural processing of low frequency sounds is significantly deteriorated by age and hearing status.
+
+- A larger IPM-FR dynamic range was associated with lower (better) IPD discrimination.
+
+
+# Speech in noise and binaural processing
+
+## Aims
+
+**Does binaural brain response relate to speech-in-noise?**
+
+- Here we investigate the relation between neural coding of temporal processing using objective (Electroencephalogram (EEG)) and behavioural (speech-in-noise listening) binaural measures in NH listeners.
+
+## Preliminary Subjects Assessment
+
+- 23 Participants took part in this study 
+
+**All participants undergone:**
+
+- Otoscopy (to ensure integrity of external ear and tympanic membrane)
+- Pure tone audiometry (hearing threshold between 250 Hz – 8 kHz) 
+- Immittance test with acoustics reflex (to ensure integrity of middle ear and lower brainstem pathways)
+- Distortion product otoacoustic emissions between 500 Hz – 10 kHz (DPOAEs, to assess outer hair cell functioning)
+
+
+## Behavioural Measures
+
+**Digits in noise test**
+
+- Adaptive staircase procedure (2-down/1-up) with variable adaptive step (Leek, 2001; Denys et al. 2019)
+- Three randomly chosen digits were presented in background speech shaped noise. 
+<center>
+![](my_figures/behavioural.png){width="60%"}
+<br>
+![](my_figures/noise.png){width="30%"}
+</center>
+
+##
+
+- Initial step size: 6 dB first two reversals; 3 dB next two reversals, and 2 dB last six reversals.
+
+- Noise was presented diotically (i.e. identical signal in both ears) at 65 dB SPL. 
+
+- Digits were presented using several **ITDs: 0, 0.1, 0.2, 0.4, 0.8 ms**. In addition, digits were also presented having the opposite polarity in both ears - **antiphasic**.
+
+- 3 runs were obtained per ITD (starting SNR at 10 dB and -30 dB).
+
+- All were presented in random order.
+
+
+## EEG recordings
+
+- Amplitude modulated (80 Hz) bandpass noise (100 - 1000 Hz) at 65 dB SPL.
+- Interaural time modulations (ITM) presented at a rate of 6.7 Hz
+- ITM consisted of: 0/0 (diotic), 0/0.1 ms, 0/0.2 ms, 0/0.4 ms, 0/0.8 ms, and antiphasic condition.
+
+<center>
+![](my_figures/stimuli.png){width="50%"}
+</center>
+
+
+## Results
+<center>
+![](my_figures/audiogram_individuals.png){width="45%"}
+![](my_figures/dpgram.png){width="45%"}
+</center>
+
+## Speech reception thresholds
+<center>
+![](my_figures/post_hocs_srt.png){width=45%}
+![](my_figures/sd_all_subjects_boxplot.png){width=45%}
+</center>
+
+- No effect of presentation was no significant (F(5, 352.6) = 1.7, p = 0.14)
+- Trial number had a significant effect (difference < **0.88 dB**) (F(2,370.4) = 22.5, p < 0.001)
+- SRT improvement with ITD ranged between 4.1 and 8.8 dB (F(5, 110) = 181.68, p < 0.001)
+- SRT standard deviation increased with ITD (F(5, 105) =  3.7317, p = 0.004). Mean SD: 0.7 (0 ITD) to 1.47 dB (Antiphasic).
+
+## EEG responses
+
+<center>
+![](my_figures/itd-fr-time-freq.png){width="55%"}
+![](my_figures/itd-fr-topographic_map.png){width="15%"}
+![](my_figures/itd-assr-topographic_map.png){width="15%"}
+</center>
+
+## EEG vs stimulus bandwidth 
+
+<center>
+![](my_figures/anova_ITDFR_BWMF_amp.png){width="45%"}
+![](my_figures/anova_ASSR_BWMF_amptransformed.png){width="45%"}
+</center>
+
+- ITM-FR no affected by stimulus bandwidth, suggesting that response is mostly elicited by energy below 1 kHz.
+
+## ITM-FR and ASSR
+
+<center>
+![](my_figures/post_hoc_itm_fr.png){width="45%"}
+![](my_figures/ASSR_amp.png){width="45%"}
+</center>
+
+- ITD-FR significantly affected by ITDs (F(5, 110) = 43.5, p << 0.001)
+- ASSR showed no significant effects (F(5, 110) = 1.92, p = 0.09)
+
+## SRT vs EEG
+
+<center>
+![](my_figures/corr_amp_digits.png){width="45%"}
+![](my_figures/corr_mean_amp_digits.png){width="45%"}
+</center>
+
+- ITM-FR amplitude, SNR or global field power (GFP) correlate significantly with SRT. 
+- Excellent correlation at group level
+- Good correlations at subject level: **19 (AMP) - 21 (GFP) significant correlations**
+
+## Conclusions
+
+## General observations
+
+- Interaural level and, in particular, interaural time differences conveyed by low frequencies (< 1500 Hz) are critical for speech understanding and segregation in the cocktail party problem (e.g. Swaminathan et al. 2016)
+
+- Hearing-impaired listeners typically find noisy environments disproportionately difficult for understanding speech, whether they wear a hearing aid or not (Killion 1997; Moore 1998).
+
+- Similar problems are encountered by users of cochlear implants, again owing to the limited frequency resolution available with implants (Clark 2003).
+
+- Binaural release from masking may improve detection thresholds up to 12 dB for multiple speech interferers (Jones and Litovsky, 2011), and facilitates source segregation provided that streaming can build up and natural onset cues are present (Drennan, Gatehouse, and Lever, 2003).
+
+- Segregation is always better for the combination of both ITDs and ILDs cues (Culling, Hawley, and Litovsky 2004)
+
+## Neurophysiological measures
+
+Objective measures of binaural processing
+
+- agree with beavioural measures of IPD processing
+- show a **reduced amplitude in hearing impaired and elder listeners**.
+- **showed great sensitivity to ITDs** and had an excellent correlation with SRTs (across several different metrics) across and withing participants.
+
+All the above suggets that objective and behavioural measures of binaural processing may be more sentitive than monaural measures to unveil hidden hearing loss.
+
+
+## Acknowledgments
+
+- Australian Research Council [project number FL160100108]
+- Thanks to you for "listening"
+<center>
+<img src="./my_figures/ahh.jpg" width="60%">
+<br>
+<img src="./my_figures/ahh_team.jpg" width="60%">
+</center>
+
+<!-- ## References -->
